@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 5px;
+}
+.header__body {
+    background: #3a57db;
+    padding: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.header__body h3{
+    font-family: "Encode Sans", sans-serif;
+    font-style: Bold;
+    color: #fff;
+}
+.header__body span{
+    font-family: "Encode Sans", sans-serif;
+    font-style: normal;
+    color: #fff;
+    font-size: small;
+}
+.header__search {
+    margin-top: 20px;
+}
+.header__search input{
+    outline: none;
+    border-radius: 40px;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border-style: none;
+    font-family: "Encode Sans", sans-serif;
+    font-style: normal;
+    background: #293d99;
+    color: #fff;
+
+}
+.main {
+    overflow-y: scroll;
+}
+.main__users {
+    padding: 20px;
+    background: blue;
+    
+}
+.users__information {
+    /* background: gray; */
+    display: flex;
+    
+}
+.hr__user{
+
+}
+.information__img {
+    width: 4rem;
+    height: 4rem;
+    
+}
+.information__img img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.information__userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    gap: 15px;
+}
+.information__userInfo h3{
+    font-family: "Encode Sans", sans-serif;
+    font-style: Bold;
+    font-size: medium;
+}
+.information__userInfo span{
+    font-family: "Encode Sans", sans-serif;
+    font-style: normal;
+    font-size: small;
+}
