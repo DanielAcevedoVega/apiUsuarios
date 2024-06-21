@@ -1,7 +1,6 @@
 export const allUserInformation = (res)=>{
-    let user = res
     let plantilla = "";
-    user.forEach((value)=>{
+    res.forEach((value)=>{
         plantilla += /*html*/`
     <article class="users__information">
         <div class="information__img">
