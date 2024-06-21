@@ -24,18 +24,20 @@ addEventListener("DOMContentLoaded", async e =>{
 
 })
 
+const removeDiacritics = (user) => {
+    return user.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+
 const searchUser = async ()=>{
     search.addEventListener("input", e =>{
-        let inputText = e.target.value.toUpperCase().trim();
+        let inputText = removeDiacritics(e.target.value.toUpperCase().trim());
         
         inputText = inputText.replace(/[0-9]/g, '');
         inputText = inputText.replace(/[^a-zA-Z0-9\s]/g, '');
-        
-
-        
+    
         const filterSearch =  users.filter(value => 
-            value.name_full.toUpperCase().includes(inputText) ||
-            value.description.toUpperCase().includes(inputText)
+            removeDiacritics(value.name_full.toUpperCase()).includes(inputText) ||
+            removeDiacritics(value.description.toUpperCase()).includes(inputText)
         );
         main__users.innerHTML = allUserInformation(filterSearch);
     })
