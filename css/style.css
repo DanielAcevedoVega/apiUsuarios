@@ -6,6 +6,9 @@
 }
 body{
     padding: 5px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .header__body {
     background: #3a57db;
@@ -42,18 +45,23 @@ body{
 }
 .main {
     overflow-y: scroll;
+    height: auto;
 }
 .main__users {
     padding: 20px;
-    background: blue;
     
 }
 .users__information {
-    /* background: gray; */
     display: flex;
+    margin-bottom: 30px;
+    align-items: center;
     
 }
 .hr__user{
+    border: none;
+    border-top: 1px solid #f5f5f5;
+    margin: 0 -20px 20px -20px; 
+    width: calc(100% + 40px);
 
 }
 .information__img {
