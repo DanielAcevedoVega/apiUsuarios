@@ -34,8 +34,8 @@ const searchUser = async ()=>{
 
         
         const filterSearch =  users.filter(value => 
-            value.name_full.toUpperCase().startsWith(inputText) ||
-            value.description.toUpperCase().startsWith(inputText)
+            value.name_full.toUpperCase().includes(inputText) ||
+            value.description.toUpperCase().includes(inputText)
         );
         main__users.innerHTML = allUserInformation(filterSearch);
     })
